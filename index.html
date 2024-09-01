@@ -5,69 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venda de eBook</title>
     <link rel="icon" href="icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body { 
-            font-family: Arial, sans-serif; 
+            font-family: 'Roboto', sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #f7f7f7; /* Cor de fundo suave */
-            color: #333; /* Cor do texto principal */
+            background: linear-gradient(to right, #e2e2e2, #ffffff); /* Gradiente de fundo */
+            color: #333; 
+        }
+        header {
+            background-color: #28a745; /* Cor de fundo do cabeçalho */
+            color: #fff; 
+            padding: 15px 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 24px; 
+            font-weight: 700; 
+        }
+        nav {
+            display: flex; 
+        }
+        nav a {
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: 500; 
+            transition: color 0.3s ease; 
+        }
+        nav a:hover {
+            color: #e2e2e2; /* Cor do link em hover */
         }
         .container { 
             max-width: 800px; 
-            margin: 0 auto 40px; /* Espaçamento inferior entre contêineres */
+            margin: 40px auto; 
             padding: 20px; 
-            background-color: #fff; /* Fundo branco */
-            border-radius: 10px; /* Borda arredondada */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
-        }
-        header, section, footer { 
-            margin-bottom: 30px; /* Espaçamento inferior entre seções */
+            background-color: #fff; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra mais forte */
+            overflow: hidden;
         }
         h1, h2, h3 { 
-            color: #28a745; /* Cor dos títulos */
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 700; 
+        }
+        h1 { 
+            color: #ffffff; 
+        }
+        h2, h3 { 
+            color: #007bff; /* Cor azul para títulos secundários */
         }
         p {
-            line-height: 1.6; /* Altura da linha aumentada para melhor legibilidade */
+            line-height: 1.8; 
+            margin: 10px 0;
         }
         .cta-button { 
-            background-color: #218838; /* Cor do botão */
-            color: white; 
-            padding: 12px 24px; /* Aumento do preenchimento do botão */
+            background-color: #28a745; 
+            color: #fff; 
+            padding: 14px 28px; 
             text-align: center; 
             display: inline-block; 
             text-decoration: none; 
-            border-radius: 5px; /* Borda arredondada */
-            transition: background-color 0.3s ease; /* Efeito de transição suave */
+            border-radius: 8px; 
+            transition: all 0.3s ease; 
+            font-weight: 700;
         }
         .cta-button:hover { 
-            background-color: #1e7e34; /* Cor de hover do botão */
+            background-color: #218838; 
+            transform: scale(1.05); /* Efeito de aumento suave */
         }
         ul {
-            padding-left: 20px; /* Recuo das listas */
+            padding-left: 20px; 
+            list-style-type: disc;
         }
         footer {
-            text-align: center; /* Centralizar o texto no rodapé */
+            text-align: center; 
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        footer p {
+            margin: 10px 0;
         }
         footer a {
-            color: #666; /* Cor dos links no rodapé */
+            color: #007bff; 
             text-decoration: none;
-            margin: 0 10px; /* Espaçamento entre os links no rodapé */
+            margin: 0 10px; 
+            font-weight: 500;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        img {
+            border-radius: 8px; /* Bordas arredondadas nas imagens */
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-    <br>
-    <br>
+    <header>
+        <div class="logo">Venda de eBook</div>
+        <nav>
+            <a href="#section1">Home</a>
+            <a href="#section2">Sobre</a>
+            <a href="#section3">Contato</a>
+        </nav>
+    </header>
 
-    <div class="container">
+    <div class="container" id="section1">
         <header>
             <h1>12 Dicas Para Desenvolvimento Pessoal</h1>
         </header>
         
         <section>
-            <img src="1.png" alt="Capa do eBook" style="width: 100%; max-width: 300px;">
+            <img src="1.png" alt="Capa do eBook">
             <p>Cada dica é um passo em direção ao seu sucesso e à sua transformação pessoal.</p>
         </section>
         
@@ -96,13 +153,13 @@
         </section>
     </div>
 
-    <div class="container">
+    <div class="container" id="section2">
         <header>
             <h1>O Poder Da Mudança</h1>
         </header>
         
         <section>
-            <img src="2.png" alt="Capa do eBook" style="width: 100%; max-width: 300px;">
+            <img src="2.png" alt="Capa do eBook">
             <p>Com uma abordagem prática e orientada para resultados, este eBook explora as razões pelas quais muitas pessoas lutam para mudar e oferece estratégias eficazes para superar a resistência à mudança.</p>
         </section>
         
@@ -131,13 +188,13 @@
         </section>
     </div>
 
-    <div class="container">
+    <div class="container" id="section3">
         <header>
             <h1>Metas Claras</h1>
         </header>
         
         <section>
-            <img src="3.png" alt="Capa do eBook" style="width: 100%; max-width: 300px;">
+            <img src="3.png" alt="Capa do eBook">
             <p>Aprenda a definir metas claras, traçar um plano eficaz e alcançar resultados extraordinários.</p>
         </section>
         
@@ -166,11 +223,9 @@
         </section>
     </div>
 
-    <div class="container">
-        <footer>
-            <p>Entre em contato: jqm5049@gmail.com</p>
-            <p><a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a></p>
-        </footer>
-    </div>
+    <footer>
+        <p>Entre em contato: <a href="mailto:jqm5049@gmail.com">jqm5049@gmail.com</a></p>
+        <p><a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a></p>
+    </footer>
 </body>
 </html>
